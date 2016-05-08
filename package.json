@@ -20,7 +20,7 @@
     "karma.start": "karma start",
     "postinstall": "typings install && npm run clean-ng2 && gulp check.versions && gulp postinstall",
     "reinstall": "rimraf node_modules && npm cache clean && npm install",
-    "start": "gulp serve --env dev",
+    "start": "node tools/utils/server.ts && gulp serve --env dev",
     "serve.dev": "gulp serve --env dev",
     "tasks.list": "gulp --tasks-simple",
     "test": "gulp test",
@@ -103,6 +103,8 @@
     "reflect-metadata": "0.1.2",
     "rxjs": "5.0.0-beta.0",
     "systemjs": "0.19.9",
+    "ts-node": "^0.5.4",
     "zone.js": "0.5.10"
-  }
+  },
+  "main": "tools/utils/server.ts"
 }
